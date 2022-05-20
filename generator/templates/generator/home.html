@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Генератор паролей</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  </head>
+  <body>
+    <div class="container text-center">
+          <h1>Генератор паролей</h1>
+
+          <form action="{% url 'password' %}">
+            Длина пароля: <select name="length">
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+              <option value="11">11</option>
+              <option value="12" selected="selected">12</option>
+              <option value="13">13</option>
+              <option value="14">14</option>
+            </select>
+
+            <br>
+            <label>
+              <input type="checkbox" name="uppercase"> Верхний регистр
+            </label>
+
+            <br>
+            <label>
+              <input type="checkbox" name="numbers"> Цифры
+            </label>
+            <br>
+
+            <label>
+              <input type="checkbox" name="special"> Особые символы
+            </label>
+            <br>
+
+            <input type="submit" name="" value="Сгенерировать пароль" class="btn btn-primary">
+          </form>
+
+          <br>
+          <br>
+
+          <a href="{% url 'about' %}">Что это такое????????????????????????????????????????</a>
+
+        </div>
+
+    <style>
+      * {
+        font-family: -apple-system, BlinkMacSystemFont, Arial;
+      }
+
+      a {
+        font-size: 30px;
+      }
+    </style>
+  </body>
+</html>
